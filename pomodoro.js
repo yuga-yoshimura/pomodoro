@@ -6,11 +6,21 @@ const time = document.getElementById("time");
 const cycle = document.getElementById("cycle");
 const startButton = document.getElementById("startButton");
 
+let lastClassName = body.className;
 let cycles;
 let startTime;
 let timer;
 
+let audioElem;
+
+function playSound() {
+    audioElem = new Audio();
+    audioElem.src = "chime.mp3";
+    audioElem.play();
+}
+
 startButton.addEventListener("click", (e) => {
+    playSound();
     cycles = 0;
     restartTimer();
 });
@@ -41,3 +51,12 @@ function updateTimer(){
 
     restartTimer();
 }
+
+
+setInterval(() => {
+    let className = body.className;
+    if (className !== lastClassName) {
+        playSound();
+        lastClassName = className;
+    }
+}, 200);
