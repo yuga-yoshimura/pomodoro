@@ -1,4 +1,4 @@
-const sets = [1, 1];
+const sets = [25, 5];
 const classes = [ "bg-danger", "bg-info" ];
 
 const body = document.getElementById("body");
