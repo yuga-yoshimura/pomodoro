@@ -1,3 +1,11 @@
 #display{
+    font-size: 8vw;
+}
+
+#time{
     font-size: 10vw;
+}
+
+#instruction{
+    font-size: 6vw;
 }

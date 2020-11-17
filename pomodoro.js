@@ -1,9 +1,11 @@
 const sets = [25, 5];
 const classes = [ "bg-danger", "bg-info" ];
+const instructions = [ "ミュート推奨", "ミュート解除推奨" ];
 
 const body = document.getElementById("body");
 const time = document.getElementById("time");
 const cycle = document.getElementById("cycle");
+const instruction = document.getElementById("instruction");
 const startButton = document.getElementById("startButton");
 
 let lastClassName = body.className;
@@ -45,6 +47,7 @@ function updateTimer(){
             cycle.textContent = cycles;
             body.classList.remove(...classes);
             body.classList.add(classes[i]);
+            instruction.textContent = instructions[i];
             return;
         }
     }
