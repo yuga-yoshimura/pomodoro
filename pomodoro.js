@@ -1,6 +1,6 @@
 const sets = [25, 5];
 const classes = [ "bg-danger", "bg-info" ];
-const instructions = [ "ミュート推奨", "ミュート解除推奨" ];
+const instructions = [ "みゅーと推奨", "ミュート解除推奨" ];
 
 const body = document.getElementById("body");
 const time = document.getElementById("time");
